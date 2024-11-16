@@ -1,0 +1,7 @@
+{
+  "name": "Abobus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
