@@ -17,13 +17,19 @@ export class Tab1Page {
 
   books: Book[] = [
     {
-      b_num: "ghfg",
-      b_unnum: "gyhfgh"
+      b_num: "Star",
+      b_unnum: "Rail"
     },
     {
-      b_num: "njknjkjin",
-      b_unnum: "hiuhuih"
+      b_num: "Li",
+      b_unnum: "Yue"
+    },
+    {
+      b_num: "Tea",
+      b_unnum: "Coffe"
     }
   ]
+  deleteBook(index: number) {
+    this.books.splice(index, 1); 
+  }
 }
-

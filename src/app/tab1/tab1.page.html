@@ -9,9 +9,20 @@
 <ion-content [fullscreen]="true">
 
 <ion-item>
-    <ion-input [(ngModel)] = "abc"></ion-input>
+    <ion-input [(ngModel)] = "abc" readonly></ion-input>
 </ion-item>
+ <ion-list>
+  <ion-item *ngFor="let book of books">
+    {{book.b_num}}, {{book.b_unnum}}
+  </ion-item>
+ </ion-list>
 
-<ion-item *ngFor="let book of books">
-  {{book.b_num}}, {{book.b_unnum}}
-</ion-item>
+<ion-content>
+  <ion-grid [fixed]="true">
+    <ion-row *ngFor="let book of books; let i = index">
+      <ion-col>{{book.b_num}}</ion-col>
+      <ion-col>{{book.b_unnum}}</ion-col>
+      <ion-button (click)="deleteBook(i)" color="danger" size="small">Delete</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
